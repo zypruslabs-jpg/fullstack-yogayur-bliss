@@ -4,21 +4,6 @@
 @tailwind components;
 @tailwind utilities;
 
-/* ── Tailwind v4 Custom Theme ── */
-@layer base {
-  :root {
-    --color-emerald: #0D5C3A;
-    --color-emerald-light: #1A7A4F;
-    --color-emerald-dark: #083D26;
-    --color-gold: #C9A84C;
-    --color-gold-light: #E2C06A;
-    --color-gold-dark: #A88835;
-    --color-saffron: #E07B39;
-    --color-cream: #FAF7F2;
-    --color-charcoal: #1C1C1E;
-  }
-}
-
 * { box-sizing: border-box; padding: 0; margin: 0; }
 html { scroll-behavior: smooth; }
 
@@ -29,80 +14,50 @@ body {
   overflow-x: hidden;
 }
 
-/* ── TYPOGRAPHY ── */
 .font-heading    { font-family: 'Playfair Display', serif !important; }
 .font-subheading { font-family: 'Cormorant Garamond', serif !important; }
 .font-body       { font-family: 'Inter', sans-serif !important; }
 
-/* ── EMERALD COLORS (replaces Tailwind built-in emerald) ── */
-.text-emerald-600 { color: #0D5C3A !important; }
-.text-emerald-700 { color: #0a4d30 !important; }
-.text-emerald-dark { color: #083D26 !important; }
-.text-emerald-200 { color: #9DD0B8 !important; }
-.text-emerald-300 { color: #6FB896 !important; }
+.text-charcoal   { color: #1C1C1E !important; }
+.bg-cream        { background-color: #FAF7F2 !important; }
 
-.bg-emerald-600   { background-color: #0D5C3A !important; }
-.bg-emerald-700   { background-color: #0a4d30 !important; }
-.bg-emerald-dark  { background-color: #083D26 !important; }
-.bg-emerald-50    { background-color: #E8F5EF !important; }
-.bg-emerald-100   { background-color: #C3E3D4 !important; }
-.bg-emerald-light { background-color: #1A7A4F !important; }
-
-.border-emerald-100  { border-color: #C3E3D4 !important; }
-.border-emerald-200  { border-color: #9DD0B8 !important; }
-.border-emerald-300  { border-color: #6FB896 !important; }
-
-.hover\:bg-emerald-600:hover { background-color: #0D5C3A !important; }
-.hover\:bg-emerald-700:hover { background-color: #0a4d30 !important; }
+.text-emerald-600         { color: #0D5C3A !important; }
+.text-emerald-700         { color: #0a4d30 !important; }
+.text-emerald-dark        { color: #083D26 !important; }
+.text-emerald-200         { color: #9DD0B8 !important; }
+.bg-emerald-600           { background-color: #0D5C3A !important; }
+.bg-emerald-700           { background-color: #0a4d30 !important; }
+.bg-emerald-dark          { background-color: #083D26 !important; }
+.bg-emerald-50            { background-color: #E8F5EF !important; }
+.bg-emerald-100           { background-color: #C3E3D4 !important; }
+.border-emerald-200       { border-color: #9DD0B8 !important; }
+.hover\:bg-emerald-600:hover  { background-color: #0D5C3A !important; }
+.hover\:bg-emerald-700:hover  { background-color: #0a4d30 !important; }
 .hover\:text-emerald-600:hover { color: #0D5C3A !important; }
-.hover\:text-emerald-700:hover { color: #0a4d30 !important; }
-.hover\:border-emerald-200:hover { border-color: #9DD0B8 !important; }
 .focus\:border-emerald-600:focus { border-color: #0D5C3A !important; }
-.focus\:ring-emerald-600\/30:focus { box-shadow: 0 0 0 3px rgba(13,92,58,.3) !important; }
 
-/* ── GOLD COLORS ── */
-.text-gold-DEFAULT { color: #C9A84C !important; }
-.text-gold-300     { color: #E8C362 !important; }
-.text-gold-light   { color: #E2C06A !important; }
-.text-gold-dark    { color: #A88835 !important; }
-
-.bg-gold-DEFAULT   { background-color: #C9A84C !important; }
-.bg-gold-light     { background-color: #E2C06A !important; }
+.text-gold-DEFAULT  { color: #C9A84C !important; }
+.text-gold-300      { color: #E8C362 !important; }
+.text-gold-light    { color: #E2C06A !important; }
+.bg-gold-DEFAULT    { background-color: #C9A84C !important; }
+.bg-gold-light      { background-color: #E2C06A !important; }
 .border-gold-DEFAULT { border-color: #C9A84C !important; }
-.border-gold-100\/50 { border-color: rgba(201,168,76,.5) !important; }
-
 .hover\:bg-gold-DEFAULT:hover { background-color: #C9A84C !important; }
 .hover\:bg-gold-light:hover   { background-color: #E2C06A !important; }
-.hover\:border-gold-DEFAULT:hover { border-color: #C9A84C !important; }
 
-/* ── SAFFRON ── */
 .text-saffron { color: #E07B39 !important; }
-.bg-saffron   { background-color: #E07B39 !important; }
 
-/* ── CREAM & CHARCOAL ── */
-.bg-cream     { background-color: #FAF7F2 !important; }
-.text-charcoal { color: #1C1C1E !important; }
-
-/* ── HERO GRADIENT ── */
 .bg-hero-gradient {
   background: linear-gradient(135deg, #083D26 0%, #0D5C3A 40%, #1A7A4F 70%, #0D5C3A 100%) !important;
 }
 
-/* ── GLASSMORPHISM ── */
 .glass {
   background: rgba(255,255,255,0.08);
   backdrop-filter: blur(16px);
   -webkit-backdrop-filter: blur(16px);
   border: 1px solid rgba(255,255,255,0.15);
 }
-.glass-dark {
-  background: rgba(13,92,58,0.15);
-  backdrop-filter: blur(20px);
-  -webkit-backdrop-filter: blur(20px);
-  border: 1px solid rgba(201,168,76,0.2);
-}
 
-/* ── GOLD SHIMMER ── */
 .gold-shimmer {
   background: linear-gradient(90deg, #C9A84C, #F0D896, #C9A84C, #A88835, #C9A84C);
   background-size: 200% auto;
@@ -112,20 +67,18 @@ body {
   animation: shimmer 3s linear infinite;
 }
 
-/* ── PREMIUM CARD ── */
 .premium-card {
   background: linear-gradient(145deg, rgba(255,255,255,.92) 0%, rgba(250,247,242,.96) 100%);
   border: 1px solid rgba(201,168,76,.18);
-  box-shadow: 0 4px 24px rgba(13,92,58,.07), 0 1px 4px rgba(201,168,76,.08);
-  transition: all 0.4s cubic-bezier(0.4,0,0.2,1);
+  box-shadow: 0 4px 24px rgba(13,92,58,.07);
+  transition: all 0.4s ease;
 }
 .premium-card:hover {
-  box-shadow: 0 12px 40px rgba(13,92,58,.14), 0 4px 12px rgba(201,168,76,.18);
+  box-shadow: 0 12px 40px rgba(13,92,58,.14);
   transform: translateY(-4px);
   border-color: rgba(201,168,76,.38);
 }
 
-/* ── SECTION DIVIDER ── */
 .section-divider {
   width: 56px;
   height: 3px;
@@ -133,7 +86,6 @@ body {
   border-radius: 2px;
 }
 
-/* ── WHATSAPP FLOAT ── */
 .whatsapp-float {
   position: fixed;
   bottom: 32px;
@@ -151,28 +103,19 @@ body {
   transition: all 0.3s ease;
   text-decoration: none;
 }
-.whatsapp-float:hover {
-  transform: scale(1.1) translateY(-2px);
-}
 
-/* ── SCROLLBAR ── */
 ::-webkit-scrollbar { width: 6px; }
 ::-webkit-scrollbar-track { background: #FAF7F2; }
 ::-webkit-scrollbar-thumb { background: #0D5C3A; border-radius: 3px; }
-::-webkit-scrollbar-thumb:hover { background: #C9A84C; }
-
-/* ── SELECTION ── */
 ::selection { background: rgba(13,92,58,.18); color: #083D26; }
 
-/* ── KEYFRAMES ── */
 @keyframes shimmer {
   0%   { background-position: -200% 0; }
   100% { background-position:  200% 0; }
 }
 @keyframes float {
-  0%,100% { transform: translateY(0) rotate(0deg); }
-  33%      { transform: translateY(-15px) rotate(2deg); }
-  66%      { transform: translateY(-8px) rotate(-1deg); }
+  0%,100% { transform: translateY(0); }
+  50%      { transform: translateY(-15px); }
 }
 @keyframes pulse-ring {
   0%   { transform: scale(0.8); opacity: 0.8; }
@@ -182,11 +125,7 @@ body {
   from { opacity: 0; transform: translateY(30px); }
   to   { opacity: 1; transform: translateY(0); }
 }
-@keyframes scroll-line {
-  0%,100% { opacity: 0.6; }
-  50%      { opacity: 0.1; }
-}
 
-.animate-float      { animation: float 6s ease-in-out infinite; }
-.animate-pulse-ring { animation: pulse-ring 2s ease-out infinite; }
-.animate-fade-up    { animation: fadeUp 0.7s ease forwards; }
+.animate-float       { animation: float 6s ease-in-out infinite; }
+.animate-pulse-ring  { animation: pulse-ring 2s ease-out infinite; }
+.animate-fade-up     { animation: fadeUp 0.7s ease forwards; }
