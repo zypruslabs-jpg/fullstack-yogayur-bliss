@@ -213,6 +213,7 @@ const chakraOrbs = [
 function Scene() {
   return (
     <>
+      <color attach="background" args={['#0a0015']} />
       <ambientLight intensity={0.3} />
       <pointLight position={[0, 5, 5]} intensity={2} color="#FFD700" />
       <pointLight position={[-5, -3, 3]} intensity={1} color="#FF6B35" />
@@ -232,7 +233,8 @@ export default function Hero3D() {
     <div className="absolute inset-0">
       <Canvas
         camera={{ position: [0, 0, 8], fov: 60 }}
-        gl={{ antialias: true, alpha: true }}
+        gl={{ antialias: true, alpha: false }}
+        style={{ background: '#0a0015' }}
         dpr={[1, 2]}
       >
         <Scene />

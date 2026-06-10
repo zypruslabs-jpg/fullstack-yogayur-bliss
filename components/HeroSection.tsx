@@ -47,7 +47,7 @@ export default function HeroSection() {
   return (
     <section
       className="relative min-h-screen flex items-center justify-center overflow-hidden"
-      style={{ background: 'linear-gradient(135deg, #0a0015 0%, #1a0a2e 30%, #0d1a1a 70%, #001a0a 100%)' }}
+      style={{ background: '#0a0015', backgroundColor: '#0a0015' }}
     >
       {/* 3D Canvas */}
       <Hero3D />
