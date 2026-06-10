@@ -47,7 +47,7 @@ export default function AboutSection() {
             viewport={{ once: true }}
           >
             <div className="inline-block px-3 py-1 rounded-full text-xs font-semibold mb-4 text-white" style={{ background: 'linear-gradient(135deg, #FF6B35, #FFD700)' }}>
-              About YogAyur Bliss
+              About ZenYoga Bliss
             </div>
 
             <h2
@@ -61,7 +61,7 @@ export default function AboutSection() {
             </h2>
 
             <p className="text-gray-600 leading-relaxed mb-4">
-              YogAyur Bliss was born from a deep passion for holistic wellness and a vision to make ancient Ayurvedic and Yoga wisdom accessible to everyone worldwide. With over 8 years of dedicated practice and study, we've created a sanctuary where healing begins.
+              ZenYoga Bliss was born from a deep passion for holistic wellness and a vision to make ancient Ayurvedic and Yoga wisdom accessible to everyone worldwide. With over 8 years of dedicated practice and study, we've created a sanctuary where healing begins.
             </p>
 
             <p className="text-gray-600 leading-relaxed mb-8">

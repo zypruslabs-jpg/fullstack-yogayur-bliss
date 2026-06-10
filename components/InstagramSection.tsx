@@ -44,13 +44,13 @@ export default function InstagramSection() {
           <p className="text-gray-500 mb-2">
             Follow{' '}
             <a
-              href="https://www.instagram.com/yogayurbliss"
+              href="https://www.instagram.com/zenyogabliss"
               target="_blank"
               rel="noopener noreferrer"
               className="font-semibold hover:underline"
               style={{ color: '#FF6B35' }}
             >
-              @yogayurbliss
+              @zenyogabliss
             </a>{' '}
             for daily wellness tips, yoga flows, and Ayurvedic wisdom.
           </p>
@@ -62,7 +62,7 @@ export default function InstagramSection() {
           {placeholderPosts.map((post, i) => (
             <motion.a
               key={post.id}
-              href="https://www.instagram.com/yogayurbliss"
+              href="https://www.instagram.com/zenyogabliss"
               target="_blank"
               rel="noopener noreferrer"
               initial={{ opacity: 0, scale: 0.9 }}
@@ -92,14 +92,14 @@ export default function InstagramSection() {
           viewport={{ once: true }}
         >
           <a
-            href="https://www.instagram.com/yogayurbliss"
+            href="https://www.instagram.com/zenyogabliss"
             target="_blank"
             rel="noopener noreferrer"
             className="inline-flex items-center gap-3 px-8 py-4 rounded-full font-semibold text-white transition-all duration-300 hover:scale-105 hover:shadow-2xl"
             style={{ background: 'linear-gradient(135deg, #FF6B35, #FF85A1, #7B2D8B)' }}
           >
             <InstagramIcon size={20} />
-            Follow @yogayurbliss on Instagram
+            Follow @zenyogabliss on Instagram
             <ExternalLink size={16} />
           </a>
         </motion.div>

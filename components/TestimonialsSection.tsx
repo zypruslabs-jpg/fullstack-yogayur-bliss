@@ -9,7 +9,7 @@ const testimonials = [
     location: 'Mumbai, India',
     avatar: '🌸',
     stars: 5,
-    text: 'YogAyur Bliss completely transformed my life! After 3 months of the PCOS wellness program, my hormones are balanced, my energy is back, and I feel like a new person. The personalized approach is truly extraordinary.',
+    text: 'ZenYoga Bliss completely transformed my life! After 3 months of the PCOS wellness program, my hormones are balanced, my energy is back, and I feel like a new person. The personalized approach is truly extraordinary.',
     program: 'PCOS Wellness Program',
   },
   {
@@ -25,7 +25,7 @@ const testimonials = [
     location: 'London, UK',
     avatar: '✨',
     stars: 5,
-    text: 'I\'ve tried countless wellness programs but nothing compares to YogAyur Bliss. The Ayurvedic consultation revealed my body type and the customized diet + yoga plan helped me lose 12kg naturally in 8 weeks!',
+    text: 'I\'ve tried countless wellness programs but nothing compares to ZenYoga Bliss. The Ayurvedic consultation revealed my body type and the customized diet + yoga plan helped me lose 12kg naturally in 8 weeks!',
     program: 'Weight Management Program',
   },
 ];
@@ -68,7 +68,7 @@ export default function TestimonialsSection() {
             </span>
           </h2>
           <p className="text-gray-500 max-w-2xl mx-auto">
-            Real stories from real people who found their path to wellness with YogAyur Bliss.
+            Real stories from real people who found their path to wellness with ZenYoga Bliss.
           </p>
           <div className="section-divider mt-6" />
         </motion.div>

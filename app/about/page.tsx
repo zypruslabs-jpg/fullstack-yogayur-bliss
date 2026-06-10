@@ -17,7 +17,7 @@ const team = [
 ];
 
 const milestones = [
-  { year: '2016', title: 'Founded YogAyur Bliss', desc: 'Started with a vision to make Ayurveda accessible worldwide.' },
+  { year: '2016', title: 'Founded ZenYoga Bliss', desc: 'Started with a vision to make Ayurveda accessible worldwide.' },
   { year: '2018', title: '500+ Clients Milestone', desc: 'Expanded to online consultations reaching global clients.' },
   { year: '2020', title: 'Global Expansion', desc: 'Serving clients in 20+ countries through online programs.' },
   { year: '2022', title: '2000+ Clients', desc: 'Launched corporate wellness programs for major companies.' },
@@ -49,7 +49,7 @@ export default function AboutPage() {
                 </span>
               </h1>
               <p className="text-gray-300 text-lg leading-relaxed max-w-2xl mx-auto" style={{ fontFamily: 'Cormorant Garamond, serif', fontSize: '1.2rem' }}>
-                Born from a deep passion for holistic healing, YogAyur Bliss has been transforming lives since 2016 through the timeless science of Ayurveda and Yoga.
+                Born from a deep passion for holistic healing, ZenYoga Bliss has been transforming lives since 2016 through the timeless science of Ayurveda and Yoga.
               </p>
             </motion.div>
           </div>
@@ -95,14 +95,14 @@ export default function AboutPage() {
                 <h2 className="text-3xl sm:text-4xl font-bold mb-6" style={{ fontFamily: 'Playfair Display, serif', color: '#1A1A2E' }}>
                   The Story Behind{' '}
                   <span style={{ background: 'linear-gradient(135deg, #FF6B35, #FFD700)', WebkitBackgroundClip: 'text', WebkitTextFillColor: 'transparent', backgroundClip: 'text' }}>
-                    YogAyur Bliss
+                    ZenYoga Bliss
                   </span>
                 </h2>
                 <div className="space-y-4 text-gray-600 leading-relaxed">
                   <p>It began with a personal health crisis. After years of conventional medicine failing to address chronic stress, digestive issues, and fatigue, our founder turned to Ayurveda — and everything changed.</p>
                   <p>Within three months of following a personalized Ayurvedic protocol with daily yoga practice, the transformation was undeniable. Not just physical — but mental clarity, emotional balance, and a profound sense of inner peace emerged.</p>
                   <p>This experience sparked a mission: to create a wellness platform that combines the depth of traditional Ayurvedic knowledge with the accessibility of modern technology, making this life-changing wisdom available to anyone, anywhere in the world.</p>
-                  <p>Today, with a team of certified Ayurvedic physicians, experienced yoga therapists, and holistic wellness coaches, YogAyur Bliss has helped over 2,500 clients from 40+ countries reclaim their health naturally.</p>
+                  <p>Today, with a team of certified Ayurvedic physicians, experienced yoga therapists, and holistic wellness coaches, ZenYoga Bliss has helped over 2,500 clients from 40+ countries reclaim their health naturally.</p>
                 </div>
               </motion.div>
 
@@ -186,7 +186,7 @@ export default function AboutPage() {
             <h2 className="text-3xl sm:text-4xl font-bold text-white mb-4" style={{ fontFamily: 'Playfair Display, serif' }}>
               Begin Your Wellness Journey Today
             </h2>
-            <p className="text-white/80 mb-8">Join 2500+ people who have transformed their lives with YogAyur Bliss.</p>
+            <p className="text-white/80 mb-8">Join 2500+ people who have transformed their lives with ZenYoga Bliss.</p>
             <Link
               href="/contact"
               className="inline-block px-8 py-4 bg-white rounded-full font-semibold transition-all duration-300 hover:scale-105 hover:shadow-2xl"

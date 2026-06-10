@@ -52,7 +52,7 @@ export default function Header() {
                   backgroundClip: 'text',
                 }}
               >
-                YogAyur Bliss
+                ZenYoga Bliss
               </div>
               <div className="text-xs text-gray-500 leading-tight" style={{ fontFamily: 'Cormorant Garamond, serif', fontStyle: 'italic' }}>
                 Ancient Wisdom. Modern Wellness.

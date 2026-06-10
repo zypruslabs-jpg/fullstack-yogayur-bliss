@@ -39,7 +39,7 @@ export default function Footer() {
               </div>
               <div>
                 <div className="text-xl font-bold" style={{ fontFamily: 'Playfair Display, serif', color: '#FFD700' }}>
-                  YogAyur Bliss
+                  ZenYoga Bliss
                 </div>
                 <div className="text-xs text-green-300 italic" style={{ fontFamily: 'Cormorant Garamond, serif' }}>
                   Ancient Wisdom. Modern Wellness.
@@ -51,7 +51,7 @@ export default function Footer() {
             </p>
             <div className="flex items-center gap-3">
               <a
-                href="https://www.instagram.com/yogayurbliss"
+                href="https://www.instagram.com/zenyogabliss"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="w-10 h-10 rounded-full flex items-center justify-center transition-all duration-300 hover:scale-110"
@@ -130,8 +130,8 @@ export default function Footer() {
                 <Mail size={16} className="text-orange-400 mt-1 flex-shrink-0" />
                 <div>
                   <p className="text-gray-300 text-sm">Email Us</p>
-                  <a href="mailto:info@yogayurbliss.com" className="text-white text-sm hover:text-yellow-400 transition-colors">
-                    info@yogayurbliss.com
+                  <a href="mailto:info@zenyogabliss.com" className="text-white text-sm hover:text-yellow-400 transition-colors">
+                    info@zenyogabliss.com
                   </a>
                 </div>
               </div>
@@ -147,12 +147,12 @@ export default function Footer() {
                 <div>
                   <p className="text-gray-300 text-sm">Instagram</p>
                   <a
-                    href="https://www.instagram.com/yogayurbliss"
+                    href="https://www.instagram.com/zenyogabliss"
                     target="_blank"
                     rel="noopener noreferrer"
                     className="text-white text-sm hover:text-yellow-400 transition-colors"
                   >
-                    @yogayurbliss
+                    @zenyogabliss
                   </a>
                 </div>
               </div>
@@ -165,7 +165,7 @@ export default function Footer() {
       <div className="border-t border-green-900">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-5 flex flex-col sm:flex-row items-center justify-between gap-4">
           <p className="text-gray-400 text-sm flex items-center gap-1">
-            © 2024 YogAyur Bliss. Made with <Heart size={14} className="text-red-400" /> for your wellness.
+            © 2024 ZenYoga Bliss. Made with <Heart size={14} className="text-red-400" /> for your wellness.
           </p>
           <div className="flex items-center gap-6 text-sm text-gray-400">
             <Link href="/privacy-policy" className="hover:text-yellow-400 transition-colors">Privacy Policy</Link>

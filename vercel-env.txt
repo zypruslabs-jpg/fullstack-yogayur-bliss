@@ -1,0 +1,5 @@
+NEXT_PUBLIC_SUPABASE_URL=https://wsozqaczchsraxsahkib.supabase.co
+NEXT_PUBLIC_SUPABASE_ANON_KEY=sb_publishable_IjCjkb1C7qeRyWW82m8shQ_Qqy5QZN7
+SUPABASE_SERVICE_ROLE_KEY=sb_secret_B9GotAvhydN_7I7wCs7fYw_3NiahRJR
+ADMIN_PASSWORD=YogAyur@Admin2024
+ADMIN_SECRET_TOKEN=yogayur_secret_token_2024

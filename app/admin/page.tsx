@@ -212,7 +212,7 @@ export default function AdminPage() {
             <div className="text-center mb-8">
               <div className="text-5xl mb-3">🌸</div>
               <h1 className="text-2xl font-bold text-white" style={{ fontFamily: 'Playfair Display, serif' }}>
-                YogAyur Bliss Admin
+                ZenYoga Bliss Admin
               </h1>
               <p className="text-gray-400 text-sm mt-1">Enter your password to continue</p>
             </div>
@@ -256,7 +256,7 @@ export default function AdminPage() {
           <div className="flex items-center gap-3">
             <div className="w-10 h-10 rounded-xl flex items-center justify-center text-xl" style={{ background: 'linear-gradient(135deg, #FF6B35, #FFD700)' }}>🌸</div>
             <div>
-              <div className="text-white font-bold text-sm">YogAyur Bliss</div>
+              <div className="text-white font-bold text-sm">ZenYoga Bliss</div>
               <div className="text-gray-400 text-xs">Admin Panel</div>
             </div>
           </div>
@@ -583,7 +583,7 @@ export default function AdminPage() {
                         {/* Action buttons */}
                         <div className="flex gap-2">
                           <a
-                            href={`https://wa.me/${b.phone.replace(/[^0-9]/g, '')}?text=Hi ${encodeURIComponent(b.name)}, this is YogAyur Bliss!`}
+                            href={`https://wa.me/${b.phone.replace(/[^0-9]/g, '')}?text=Hi ${encodeURIComponent(b.name)}, this is ZenYoga Bliss!`}
                             target="_blank"
                             rel="noopener noreferrer"
                             className="flex items-center gap-1 px-3 py-1.5 rounded-lg text-white text-xs font-medium"
@@ -593,7 +593,7 @@ export default function AdminPage() {
                             <MessageSquare size={12} />
                           </a>
                           <a
-                            href={`mailto:${b.email}?subject=Your YogAyur Bliss Consultation`}
+                            href={`mailto:${b.email}?subject=Your ZenYoga Bliss Consultation`}
                             className="flex items-center gap-1 px-3 py-1.5 rounded-lg text-white text-xs font-medium"
                             style={{ background: '#FF6B35' }}
                             title="Email"
