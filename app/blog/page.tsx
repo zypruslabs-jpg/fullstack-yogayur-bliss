@@ -66,18 +66,18 @@ export default function BlogPage() {
       <Header />
       <main className="pt-20">
         {/* Hero */}
-        <section className="py-24 text-center" style={{ background: 'linear-gradient(135deg, #0a0015 0%, #1a0a2e 100%)' }}>
+        <section className="py-24 text-center" style={{ background: 'linear-gradient(135deg, #FFF8F0 0%, #F0FFF4 100%)' }}>
           <div className="max-w-3xl mx-auto px-4">
             <div className="inline-block px-4 py-1.5 rounded-full text-xs font-semibold mb-6 text-white" style={{ background: 'rgba(0,168,107,0.3)', border: '1px solid rgba(0,168,107,0.5)' }}>
               Wellness Blog
             </div>
-            <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold text-white mb-6" style={{ fontFamily: 'Playfair Display, serif' }}>
+            <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold mb-6" style={{ fontFamily: 'Playfair Display, serif', color: '#1A1A2E' }}>
               Ancient Wisdom,{' '}
               <span style={{ background: 'linear-gradient(135deg, #00A86B, #00BCD4)', WebkitBackgroundClip: 'text', WebkitTextFillColor: 'transparent', backgroundClip: 'text' }}>
                 Modern Insights
               </span>
             </h1>
-            <p className="text-gray-300 text-lg" style={{ fontFamily: 'Cormorant Garamond, serif' }}>
+            <p className="text-gray-500 text-lg" style={{ fontFamily: 'Cormorant Garamond, serif' }}>
               Ayurveda, Yoga, and holistic wellness — expert articles for your journey.
             </p>
           </div>
