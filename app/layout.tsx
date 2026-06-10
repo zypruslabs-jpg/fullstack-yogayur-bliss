@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import "./globals.css";
+import FallingPetals from "@/components/FallingPetals";
 
 export const metadata: Metadata = {
   title: "ZenYoga Bliss | Ancient Ayurvedic Wisdom & Modern Wellness",
@@ -21,7 +22,10 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <body>{children}</body>
+      <body>
+        <FallingPetals />
+        {children}
+      </body>
     </html>
   );
 }
