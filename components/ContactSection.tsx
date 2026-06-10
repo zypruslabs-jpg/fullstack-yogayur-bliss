@@ -60,8 +60,8 @@ export default function ContactSection() {
 
             {[
               { icon: <Phone size={22} />, label: 'WhatsApp & Phone', value: '+91 XXXXXXXXXX', link: 'https://wa.me/91XXXXXXXXXX', color: '#25D366', cta: 'Chat on WhatsApp →' },
-              { icon: <Mail size={22} />, label: 'Email Us', value: 'info@zenyogabliss.com', link: 'mailto:info@zenyogabliss.com', color: '#FF6B35', cta: 'Send Email →' },
-              { icon: <InstagramIcon size={22} />, label: 'Instagram', value: '@zenyogabliss', link: 'https://www.instagram.com/zenyogabliss', color: '#FF85A1', cta: 'Follow Us →' },
+              { icon: <Mail size={22} />, label: 'Email Us', value: 'info@yogayurbliss.com', link: 'mailto:info@yogayurbliss.com', color: '#FF6B35', cta: 'Send Email →' },
+              { icon: <InstagramIcon size={22} />, label: 'Instagram', value: '@yogayurbliss', link: 'https://www.instagram.com/yogayurbliss', color: '#FF85A1', cta: 'Follow Us →' },
             ].map((c) => (
               <a key={c.label} href={c.link} target="_blank" rel="noopener noreferrer"
                 className="flex items-center gap-5 p-5 rounded-2xl bg-white transition-all duration-300 hover:scale-[1.02] group"

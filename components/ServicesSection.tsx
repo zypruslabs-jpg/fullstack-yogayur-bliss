@@ -115,32 +115,21 @@ export default function ServicesSection() {
               transition={{ duration: 0.5, delay: i * 0.1 }}
               viewport={{ once: true }}
               whileHover={{ y: -8, scale: 1.02 }}
-              className="group p-6 rounded-2xl bg-white cursor-pointer relative overflow-hidden"
+              className="group rounded-2xl bg-white cursor-pointer relative overflow-hidden"
               style={{
                 boxShadow: '0 4px 20px rgba(0,0,0,0.06)',
                 transition: 'all 0.3s cubic-bezier(0.4, 0, 0.2, 1)',
                 border: `1px solid ${service.border}30`,
               }}
             >
-              {/* Top color bar */}
-              <div
-                className="absolute top-0 left-0 right-0 h-1 rounded-t-2xl"
-                style={{ background: `linear-gradient(90deg, ${service.color}, ${service.color}88)` }}
-              />
+              {/* ── SERVICE IMAGE PLACEHOLDER ── */}
+              <div className="h-40 flex flex-col items-center justify-center gap-1 relative"
+                style={{ background: service.bg, borderBottom: `1px solid ${service.border}20` }}>
+                <div className="text-5xl group-hover:scale-110 transition-transform duration-300">{service.icon}</div>
+                <div className="text-xs text-gray-400 opacity-60">Service Image — 400×200px</div>
+              </div>
 
-              {/* Hover glow */}
-              <div
-                className="absolute inset-0 opacity-0 group-hover:opacity-100 transition-opacity duration-300 rounded-2xl"
-                style={{ background: service.bg }}
-              />
-
-              <div className="relative z-10">
-                <div
-                  className="w-14 h-14 rounded-2xl flex items-center justify-center text-2xl mb-4 transition-transform duration-300 group-hover:scale-110"
-                  style={{ background: service.bg, border: `1px solid ${service.border}40` }}
-                >
-                  {service.icon}
-                </div>
+              <div className="relative z-10 p-5">
                 <h3
                   className="font-bold text-lg mb-2"
                   style={{ fontFamily: 'Playfair Display, serif', color: '#1A1A2E' }}

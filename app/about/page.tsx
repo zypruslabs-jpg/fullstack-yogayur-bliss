@@ -1,13 +1,10 @@
 'use client';
 
 import { motion } from 'framer-motion';
-import dynamic from 'next/dynamic';
 import Link from 'next/link';
 import Header from '@/components/Header';
 import Footer from '@/components/Footer';
 import WhatsAppButton from '@/components/WhatsAppButton';
-
-const AboutOrb = dynamic(() => import('@/components/AboutOrb'), { ssr: false });
 
 const team = [
   { name: 'Dr. Ananya Sharma', role: 'Chief Ayurvedic Physician', exp: '12 Years', emoji: '🌿', color: '#00A86B' },
@@ -34,9 +31,11 @@ export default function AboutPage() {
           className="py-24 lg:py-32 relative overflow-hidden"
           style={{ background: 'linear-gradient(135deg, #FFF8F0 0%, #FFF3E0 50%, #F0FFF4 100%)' }}
         >
-          <div className="absolute inset-0 opacity-30">
-            <AboutOrb />
-          </div>
+          {/* Decorative circles */}
+          <div className="absolute top-0 right-0 w-96 h-96 rounded-full opacity-20 -translate-y-1/2 translate-x-1/2 pointer-events-none"
+            style={{ background: 'radial-gradient(circle, #FF6B35, transparent)' }} />
+          <div className="absolute bottom-0 left-0 w-72 h-72 rounded-full opacity-15 translate-y-1/2 -translate-x-1/2 pointer-events-none"
+            style={{ background: 'radial-gradient(circle, #00A86B, transparent)' }} />
           <div className="relative z-10 max-w-4xl mx-auto px-4 text-center">
             <motion.div initial={{ opacity: 0, y: 30 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.8 }}>
               <div className="inline-block px-4 py-1.5 rounded-full text-xs font-semibold mb-6 text-white" style={{ background: 'rgba(255,107,53,0.3)', border: '1px solid rgba(255,107,53,0.5)' }}>
@@ -160,20 +159,23 @@ export default function AboutPage() {
                   transition={{ duration: 0.5, delay: i * 0.1 }}
                   viewport={{ once: true }}
                   whileHover={{ y: -8 }}
-                  className="text-center p-8 rounded-3xl bg-white"
+                  className="rounded-3xl bg-white overflow-hidden"
                   style={{ boxShadow: '0 4px 30px rgba(0,0,0,0.08)', border: `1px solid ${member.color}30` }}
                 >
-                  <div
-                    className="w-20 h-20 rounded-full flex items-center justify-center text-4xl mx-auto mb-4"
-                    style={{ background: `${member.color}15`, border: `3px solid ${member.color}40` }}
-                  >
-                    {member.emoji}
+                  {/* Photo placeholder */}
+                  <div className="h-48 flex flex-col items-center justify-center gap-2 relative"
+                    style={{ background: `linear-gradient(135deg, ${member.color}10, ${member.color}20)`, borderBottom: `1px solid ${member.color}20` }}>
+                    <div className="text-5xl">{member.emoji}</div>
+                    <div className="text-xs text-gray-400">Photo Placeholder</div>
+                    <div className="text-xs text-gray-300">300 × 300px</div>
                   </div>
-                  <h3 className="font-bold text-lg mb-1" style={{ fontFamily: 'Playfair Display, serif', color: '#1A1A2E' }}>{member.name}</h3>
-                  <p className="text-gray-500 text-sm mb-2">{member.role}</p>
-                  <span className="inline-block px-3 py-1 rounded-full text-xs font-semibold text-white" style={{ background: member.color }}>
-                    {member.exp} Experience
-                  </span>
+                  <div className="p-5 text-center">
+                    <h3 className="font-bold text-base mb-1" style={{ fontFamily: 'Playfair Display, serif', color: '#1A1A2E' }}>{member.name}</h3>
+                    <p className="text-gray-500 text-sm mb-3">{member.role}</p>
+                    <span className="inline-block px-3 py-1 rounded-full text-xs font-semibold text-white" style={{ background: member.color }}>
+                      {member.exp} Experience
+                    </span>
+                  </div>
                 </motion.div>
               ))}
             </div>

@@ -18,8 +18,8 @@ export default function PrivacyPolicyPage() {
               { title: '4. Data Security', content: 'We implement industry-standard security measures including SSL encryption, secure database storage via Supabase, and access controls to protect your personal information from unauthorized access.' },
               { title: '5. Cookies', content: 'We use essential cookies to ensure the website functions properly. Analytics cookies help us understand how visitors use our site. You can disable cookies through your browser settings.' },
               { title: '6. Third-Party Services', content: 'We use Supabase for data storage and WhatsApp for communication. These services have their own privacy policies. We recommend reviewing them.' },
-              { title: '7. Your Rights', content: 'You have the right to access, correct, or delete your personal data. To exercise these rights, contact us at info@zenyogabliss.com. We will respond within 30 days.' },
-              { title: '8. Contact Us', content: 'For privacy-related questions, contact: info@zenyogabliss.com | +91 XXXXXXXXXX | zenyogabliss.com' },
+              { title: '7. Your Rights', content: 'You have the right to access, correct, or delete your personal data. To exercise these rights, contact us at info@yogayurbliss.com. We will respond within 30 days.' },
+              { title: '8. Contact Us', content: 'For privacy-related questions, contact: info@yogayurbliss.com | +91 XXXXXXXXXX | zenyogabliss.com' },
             ].map(section => (
               <div key={section.title} className="mb-8">
                 <h2 className="text-xl font-bold mb-3" style={{ fontFamily: 'Playfair Display, serif', color: '#FF6B35' }}>

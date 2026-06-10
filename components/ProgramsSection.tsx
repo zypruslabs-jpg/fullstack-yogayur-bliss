@@ -122,21 +122,17 @@ export default function ProgramsSection() {
               className="group bg-white rounded-2xl overflow-hidden cursor-pointer"
               style={{ boxShadow: '0 4px 20px rgba(0,0,0,0.08)', border: '1px solid rgba(0,0,0,0.06)' }}
             >
-              {/* Color top bar */}
-              <div className="h-1.5" style={{ background: program.color }} />
+              {/* ── PROGRAM IMAGE PLACEHOLDER ── */}
+              <div className="h-36 flex flex-col items-center justify-center gap-1"
+                style={{ background: `linear-gradient(135deg, ${program.color}12, ${program.color}25)`, borderBottom: `1px solid ${program.color}20` }}>
+                <div className="text-4xl">{program.icon}</div>
+                <div className="text-xs text-gray-400 opacity-60">Program Image — 400×180px</div>
+              </div>
 
-              <div className="p-6">
-                <div className="flex items-center gap-3 mb-4">
-                  <div
-                    className="w-12 h-12 rounded-xl flex items-center justify-center text-xl"
-                    style={{ background: `${program.color}15`, border: `1px solid ${program.color}40` }}
-                  >
-                    {program.icon}
-                  </div>
-                  <div>
-                    <div className="text-xs text-gray-400">{program.duration}</div>
-                    <div className="text-xs font-medium" style={{ color: program.color }}>{program.sessions}</div>
-                  </div>
+              <div className="p-5">
+                <div className="flex items-center justify-between mb-3">
+                  <div className="text-xs text-gray-400">{program.duration}</div>
+                  <div className="text-xs font-semibold px-2 py-0.5 rounded-full text-white" style={{ background: program.color }}>{program.sessions}</div>
                 </div>
 
                 <h3

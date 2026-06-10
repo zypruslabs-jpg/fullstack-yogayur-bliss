@@ -51,7 +51,7 @@ export default function Footer() {
             </p>
             <div className="flex items-center gap-3">
               <a
-                href="https://www.instagram.com/zenyogabliss"
+                href="https://www.instagram.com/yogayurbliss"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="w-10 h-10 rounded-full flex items-center justify-center transition-all duration-300 hover:scale-110"
@@ -130,8 +130,8 @@ export default function Footer() {
                 <Mail size={16} className="text-orange-400 mt-1 flex-shrink-0" />
                 <div>
                   <p className="text-gray-300 text-sm">Email Us</p>
-                  <a href="mailto:info@zenyogabliss.com" className="text-white text-sm hover:text-yellow-400 transition-colors">
-                    info@zenyogabliss.com
+                  <a href="mailto:info@yogayurbliss.com" className="text-white text-sm hover:text-yellow-400 transition-colors">
+                    info@yogayurbliss.com
                   </a>
                 </div>
               </div>
@@ -147,12 +147,12 @@ export default function Footer() {
                 <div>
                   <p className="text-gray-300 text-sm">Instagram</p>
                   <a
-                    href="https://www.instagram.com/zenyogabliss"
+                    href="https://www.instagram.com/yogayurbliss"
                     target="_blank"
                     rel="noopener noreferrer"
                     className="text-white text-sm hover:text-yellow-400 transition-colors"
                   >
-                    @zenyogabliss
+                    @yogayurbliss
                   </a>
                 </div>
               </div>
