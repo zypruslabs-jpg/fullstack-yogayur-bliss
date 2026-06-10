@@ -110,7 +110,7 @@ export default function ProgramsSection() {
         </motion.div>
 
         {/* Grid */}
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+        <div className="grid-4col">
           {programs.map((program, i) => (
             <motion.div
               key={program.title}

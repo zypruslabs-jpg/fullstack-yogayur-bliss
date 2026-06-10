@@ -51,7 +51,7 @@ export default function WhyUsSection() {
         </motion.div>
 
         {/* 3-col layout */}
-        <div className="grid grid-cols-1 lg:grid-cols-3 gap-8 items-start">
+        <div className="grid-3col">
 
           {/* Left — 3 reason cards */}
           <div className="space-y-5">

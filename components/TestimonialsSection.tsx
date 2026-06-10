@@ -74,7 +74,7 @@ export default function TestimonialsSection() {
         </motion.div>
 
         {/* Cards */}
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+        <div className="grid-3card">
           {testimonials.map((t, i) => (
             <motion.div
               key={t.name}
