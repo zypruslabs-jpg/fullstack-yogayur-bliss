@@ -9,8 +9,8 @@ import * as THREE from 'three';
 function ChakraParticles() {
   const pointsRef = useRef<THREE.Points>(null);
   const chakraColors = [
-    '#FF0000', '#FF7F00', '#FFFF00', '#00FF00',
-    '#00BFFF', '#4B0082', '#8B00FF',
+    '#FF6B35', '#FFD700', '#FF85A1', '#00A86B',
+    '#00BCD4', '#7B2D8B', '#FF6B35',
   ];
 
   const { positions, colors } = useMemo(() => {
@@ -201,13 +201,13 @@ function ChakraOrb({ position, color }: { position: [number, number, number]; co
 }
 
 const chakraOrbs = [
-  { position: [-8, 3, -5] as [number, number, number], color: '#FF0000' },
-  { position: [8, -2, -5] as [number, number, number], color: '#FF7F00' },
-  { position: [-6, -4, -3] as [number, number, number], color: '#FFFF00' },
-  { position: [6, 4, -4] as [number, number, number], color: '#00FF00' },
+  { position: [-8, 3, -5] as [number, number, number], color: '#FF6B35' },
+  { position: [8, -2, -5] as [number, number, number], color: '#FFD700' },
+  { position: [-6, -4, -3] as [number, number, number], color: '#FF85A1' },
+  { position: [6, 4, -4] as [number, number, number], color: '#00A86B' },
   { position: [-10, 0, -6] as [number, number, number], color: '#00BCD4' },
-  { position: [10, 2, -5] as [number, number, number], color: '#4B0082' },
-  { position: [0, 6, -4] as [number, number, number], color: '#8B00FF' },
+  { position: [10, 2, -5] as [number, number, number], color: '#7B2D8B' },
+  { position: [0, 6, -4] as [number, number, number], color: '#FFD700' },
 ];
 
 function Scene() {
