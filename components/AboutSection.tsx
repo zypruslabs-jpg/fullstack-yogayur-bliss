@@ -19,8 +19,8 @@ const teamImages = [
 export default function AboutSection() {
   return (
     <section className="py-20 lg:py-28 bg-white" id="about">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="grid-2col">
+      <div className="wrap">
+        <div className="col2">
 
           {/* LEFT — Image / Visual Panel */}
           <motion.div

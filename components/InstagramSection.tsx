@@ -16,7 +16,7 @@ const placeholderPosts = [
 export default function InstagramSection() {
   return (
     <section className="py-20 lg:py-28 bg-white">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div className="wrap">
         {/* Header */}
         <motion.div
           className="text-center mb-12"
@@ -58,7 +58,7 @@ export default function InstagramSection() {
         </motion.div>
 
         {/* Grid */}
-        <div className="grid-6col" style={{marginBottom:"32px"}}>
+        <div className="col6" style={{marginBottom:"32px"}}>
           {placeholderPosts.map((post, i) => (
             <motion.a
               key={post.id}

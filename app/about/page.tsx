@@ -56,8 +56,8 @@ export default function AboutPage() {
 
         {/* Mission / Vision / Values */}
         <section className="py-20 bg-white">
-          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+          <div className="wrap">
+            <div className="col3">
               {[
                 { icon: '🎯', title: 'Our Mission', color: '#FF6B35', text: 'To make authentic Ayurvedic wisdom and therapeutic yoga accessible to every person on the planet, enabling natural, lasting health transformations.' },
                 { icon: '🌟', title: 'Our Vision', color: '#FFD700', text: 'A world where every individual thrives in mind, body, and spirit — living in harmony with nature through the principles of Ayurveda and Yoga.' },
@@ -83,8 +83,8 @@ export default function AboutPage() {
 
         {/* Story */}
         <section className="py-20" style={{ background: 'linear-gradient(180deg, #FFF8F0, white)' }}>
-          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
+          <div className="wrap">
+            <div className="col2">
               <motion.div
                 initial={{ opacity: 0, x: -40 }}
                 whileInView={{ opacity: 1, x: 0 }}
@@ -139,7 +139,7 @@ export default function AboutPage() {
 
         {/* Team */}
         <section className="py-20 bg-white">
-          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="wrap">
             <motion.div className="text-center mb-14" initial={{ opacity: 0, y: 30 }} whileInView={{ opacity: 1, y: 0 }} transition={{ duration: 0.7 }} viewport={{ once: true }}>
               <h2 className="text-3xl sm:text-4xl font-bold mb-4" style={{ fontFamily: 'Playfair Display, serif', color: '#1A1A2E' }}>
                 Meet Our{' '}
@@ -150,7 +150,7 @@ export default function AboutPage() {
               <p className="text-gray-500">Certified practitioners with decades of combined experience in Ayurveda and Yoga.</p>
               <div className="section-divider mt-6" />
             </motion.div>
-            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
+            <div className="col4">
               {team.map((member, i) => (
                 <motion.div
                   key={member.name}

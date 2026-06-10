@@ -28,7 +28,7 @@ const certifications = [
 export default function WhyUsSection() {
   return (
     <section className="py-20 lg:py-28" style={{ background: 'linear-gradient(135deg, #F0FFF4 0%, #FFF8F0 100%)' }}>
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div className="wrap">
 
         {/* Header */}
         <motion.div className="text-center mb-16"
@@ -51,7 +51,7 @@ export default function WhyUsSection() {
         </motion.div>
 
         {/* 3-col layout */}
-        <div className="grid-3col">
+        <div className="col3">
 
           {/* Left — 3 reason cards */}
           <div className="space-y-5">
@@ -91,7 +91,7 @@ export default function WhyUsSection() {
             </div>
 
             {/* Stats grid */}
-            <div className="grid grid-cols-2 gap-0">
+            <div style={{display:"grid",gridTemplateColumns:"1fr 1fr"}}>
               {stats.map((stat, i) => (
                 <div key={stat.label}
                   className="flex flex-col items-center justify-center py-5 px-3 text-center"

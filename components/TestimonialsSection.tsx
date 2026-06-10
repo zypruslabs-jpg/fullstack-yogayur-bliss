@@ -46,7 +46,7 @@ export default function TestimonialsSection() {
       className="py-20 lg:py-28"
       style={{ background: 'linear-gradient(180deg, #FFF8F0 0%, #FFF0E0 100%)' }}
     >
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div className="wrap">
         {/* Header */}
         <motion.div
           className="text-center mb-16"
@@ -123,7 +123,7 @@ export default function TestimonialsSection() {
 
         {/* Stats row */}
         <motion.div
-          className="mt-16 grid grid-cols-2 sm:grid-cols-4 gap-6"
+          className="col4" style={{marginTop:"64px"}}
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.7 }}

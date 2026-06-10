@@ -32,7 +32,7 @@ export default function ContactSection() {
 
   return (
     <section className="py-20 lg:py-28" style={{ background: 'linear-gradient(135deg, #FFF8F0 0%, #F0FFF4 100%)' }} id="contact">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div className="wrap">
 
         <motion.div className="text-center mb-14" initial={{ opacity: 0, y: 30 }} whileInView={{ opacity: 1, y: 0 }} transition={{ duration: 0.7 }} viewport={{ once: true }}>
           <div className="inline-block px-3 py-1 rounded-full text-xs font-semibold mb-4 text-white" style={{ background: 'linear-gradient(135deg, #FF6B35, #FFD700)' }}>
@@ -50,7 +50,7 @@ export default function ContactSection() {
           <div className="section-divider mt-6" />
         </motion.div>
 
-        <div className="grid-2col">
+        <div className="col2">
           {/* Contact Info */}
           <motion.div initial={{ opacity: 0, x: -40 }} whileInView={{ opacity: 1, x: 0 }} transition={{ duration: 0.8 }} viewport={{ once: true }} className="space-y-6">
             <div>

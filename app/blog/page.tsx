@@ -85,7 +85,7 @@ export default function BlogPage() {
 
         {/* Blog Content */}
         <section className="py-16 lg:py-20" style={{ background: 'linear-gradient(180deg, #FFF8F0, white)' }}>
-          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="wrap">
             {/* Category Filter */}
             <div className="flex flex-wrap gap-3 justify-center mb-12">
               {categories.map(cat => (

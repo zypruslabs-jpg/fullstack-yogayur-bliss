@@ -18,111 +18,104 @@ export default function Header() {
   const [menuOpen, setMenuOpen] = useState(false);
 
   useEffect(() => {
-    const handleScroll = () => setScrolled(window.scrollY > 50);
+    const handleScroll = () => setScrolled(window.scrollY > 60);
     window.addEventListener('scroll', handleScroll);
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
 
   return (
-    <header
-      className={`fixed top-0 left-0 right-0 z-50 transition-all duration-500 ${
-        scrolled
-          ? 'bg-white/95 backdrop-blur-md shadow-lg'
-          : 'bg-transparent'
-      }`}
-    >
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="flex items-center justify-between h-16 lg:h-20">
-          {/* Logo */}
-          <Link href="/" className="flex items-center gap-2">
-            <div
-              className="w-10 h-10 rounded-full flex items-center justify-center text-white font-bold text-lg"
-              style={{ background: 'linear-gradient(135deg, #FF6B35, #FFD700)' }}
+    <header style={{
+      position: 'fixed', top: 0, left: 0, right: 0, zIndex: 50,
+      background: scrolled ? 'rgba(255,255,255,0.97)' : 'rgba(255,248,240,0.85)',
+      backdropFilter: 'blur(12px)',
+      boxShadow: scrolled ? '0 2px 20px rgba(0,0,0,0.08)' : 'none',
+      transition: 'all 0.4s ease',
+      borderBottom: scrolled ? '1px solid #f3f4f6' : 'none',
+    }}>
+      <div className="wrap" style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between', height: '72px' }}>
+
+        {/* Logo */}
+        <Link href="/" style={{ display: 'flex', alignItems: 'center', gap: '10px', textDecoration: 'none' }}>
+          <div style={{
+            width: '42px', height: '42px', borderRadius: '50%',
+            display: 'flex', alignItems: 'center', justifyContent: 'center',
+            background: 'linear-gradient(135deg, #FF6B35, #FFD700)',
+            fontSize: '1.2rem', flexShrink: 0,
+          }}>🌸</div>
+          <div>
+            <div style={{
+              fontFamily: 'Playfair Display, serif', fontWeight: 800, fontSize: '1.1rem',
+              background: 'linear-gradient(135deg, #FF6B35, #FFD700)',
+              WebkitBackgroundClip: 'text', WebkitTextFillColor: 'transparent', backgroundClip: 'text',
+              lineHeight: 1.2,
+            }}>ZenYoga Bliss</div>
+            <div style={{ fontFamily: 'Cormorant Garamond, serif', fontSize: '0.65rem', color: '#9ca3af', fontStyle: 'italic', lineHeight: 1 }}>
+              Ancient Wisdom. Modern Wellness.
+            </div>
+          </div>
+        </Link>
+
+        {/* Desktop Nav */}
+        <nav style={{ display: 'flex', alignItems: 'center', gap: '32px' }} className="hidden lg:flex">
+          {navLinks.map((link) => (
+            <Link key={link.href} href={link.href} style={{
+              fontSize: '0.875rem', fontWeight: 500, color: '#374151',
+              textDecoration: 'none', transition: 'color 0.2s',
+            }}
+              onMouseEnter={e => (e.currentTarget.style.color = '#FF6B35')}
+              onMouseLeave={e => (e.currentTarget.style.color = '#374151')}
             >
-              🌸
-            </div>
-            <div>
-              <div
-                className="font-bold text-xl leading-tight"
-                style={{
-                  fontFamily: 'Playfair Display, serif',
-                  background: 'linear-gradient(135deg, #FF6B35, #FFD700)',
-                  WebkitBackgroundClip: 'text',
-                  WebkitTextFillColor: 'transparent',
-                  backgroundClip: 'text',
-                }}
-              >
-                ZenYoga Bliss
-              </div>
-              <div className="text-xs text-gray-500 leading-tight" style={{ fontFamily: 'Cormorant Garamond, serif', fontStyle: 'italic' }}>
-                Ancient Wisdom. Modern Wellness.
-              </div>
-            </div>
+              {link.label}
+            </Link>
+          ))}
+          <Link href="/contact" style={{
+            padding: '10px 22px', borderRadius: '999px', fontSize: '0.875rem',
+            fontWeight: 600, color: 'white', textDecoration: 'none',
+            background: 'linear-gradient(135deg, #FF6B35, #FFD700)',
+            boxShadow: '0 4px 15px rgba(255,107,53,0.3)',
+            transition: 'transform 0.2s, box-shadow 0.2s',
+          }}>
+            Book Free Consult
           </Link>
+        </nav>
 
-          {/* Desktop Nav */}
-          <nav className="hidden lg:flex items-center gap-8">
-            {navLinks.map((link) => (
-              <Link
-                key={link.href}
-                href={link.href}
-                className={`text-sm font-medium transition-colors duration-200 hover:text-orange-500 ${
-                  scrolled ? 'text-gray-700' : 'text-white'
-                }`}
-              >
-                {link.label}
-              </Link>
-            ))}
-          </nav>
+        {/* Mobile hamburger */}
+        <button
+          onClick={() => setMenuOpen(!menuOpen)}
+          className="lg:hidden"
+          style={{ padding: '8px', background: 'none', border: 'none', cursor: 'pointer', color: '#374151' }}
+        >
+          {menuOpen ? <X size={24} /> : <Menu size={24} />}
+        </button>
+      </div>
 
-          {/* CTA Button */}
-          <div className="hidden lg:flex items-center gap-3">
-            <Link
-              href="/contact"
-              className="px-5 py-2 rounded-full text-sm font-semibold text-white transition-all duration-300 hover:scale-105 hover:shadow-lg"
-              style={{ background: 'linear-gradient(135deg, #FF6B35, #FFD700)' }}
-            >
-              Book Consultation
+      {/* Mobile menu */}
+      {menuOpen && (
+        <div style={{
+          background: 'white', margin: '0 16px 16px',
+          borderRadius: '16px', boxShadow: '0 8px 40px rgba(0,0,0,0.12)',
+          overflow: 'hidden',
+        }}>
+          {navLinks.map((link) => (
+            <Link key={link.href} href={link.href} onClick={() => setMenuOpen(false)} style={{
+              display: 'block', padding: '14px 24px',
+              color: '#374151', textDecoration: 'none', fontSize: '0.95rem', fontWeight: 500,
+              borderBottom: '1px solid #f9fafb',
+            }}>
+              {link.label}
+            </Link>
+          ))}
+          <div style={{ padding: '16px 24px' }}>
+            <Link href="/contact" onClick={() => setMenuOpen(false)} style={{
+              display: 'block', textAlign: 'center', padding: '12px',
+              borderRadius: '999px', color: 'white', textDecoration: 'none',
+              fontWeight: 600, background: 'linear-gradient(135deg, #FF6B35, #FFD700)',
+            }}>
+              Book Free Consultation
             </Link>
           </div>
-
-          {/* Mobile menu button */}
-          <button
-            onClick={() => setMenuOpen(!menuOpen)}
-            className={`lg:hidden p-2 rounded-lg ${scrolled ? 'text-gray-700' : 'text-white'}`}
-          >
-            {menuOpen ? <X size={24} /> : <Menu size={24} />}
-          </button>
         </div>
-
-        {/* Mobile Menu */}
-        {menuOpen && (
-          <div className="lg:hidden bg-white rounded-2xl shadow-xl mb-4 overflow-hidden">
-            <nav className="flex flex-col py-4">
-              {navLinks.map((link) => (
-                <Link
-                  key={link.href}
-                  href={link.href}
-                  onClick={() => setMenuOpen(false)}
-                  className="px-6 py-3 text-gray-700 hover:text-orange-500 hover:bg-orange-50 transition-colors font-medium"
-                >
-                  {link.label}
-                </Link>
-              ))}
-              <div className="px-6 pt-3 pb-1">
-                <Link
-                  href="/contact"
-                  onClick={() => setMenuOpen(false)}
-                  className="block text-center px-5 py-2 rounded-full text-sm font-semibold text-white"
-                  style={{ background: 'linear-gradient(135deg, #FF6B35, #FFD700)' }}
-                >
-                  Book Consultation
-                </Link>
-              </div>
-            </nav>
-          </div>
-        )}
-      </div>
+      )}
     </header>
   );
 }
